@@ -1,0 +1,126 @@
+@font-face {
+    font-family: myFont;
+    src: url(Intro\ Cond\ Black\ Free.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFont;
+}
+
+body {
+    display: flex;
+    background: #f4f4f9; /* Light gray background */
+    justify-content: center;
+    align-items: center;
+    color: #333; /* Dark gray text */
+    text-align: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    border-radius: 1rem;
+    flex-direction: column;
+    background: #ffffff; /* White container background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 2rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    background: #e8e8e8; /* Light gray action bar */
+    border-radius: 0.75rem;
+}
+
+.actions button {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: #007bff; /* Blue button */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.actions button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+.preview-image img {
+    max-width: 500px;
+    max-height: 350px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 1rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+
+.content button {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: #28a745; /* Green button */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.content button:hover {
+    background: #218838; /* Darker green on hover */
+}
+
+.filter,
+.rotate,
+.resize,
+.aspect {
+    margin: 1rem 0.5rem;
+    padding: 0.5rem;
+    background: #f8f9fa; /* Very light gray for filter, rotate, resize, and aspect */
+    border-radius: 0.5rem;
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+.slider {
+    margin-top: 0.5rem;
+}
+
+.filter-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider input {
+    width: 100%;
+}
+
+input[type=number] {
+    padding: 0.5rem;
+    border-color: #ccc; /* Light gray border */
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #333; /* Dark gray text */
+}

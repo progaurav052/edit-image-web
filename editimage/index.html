@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="filter-options">
+                <h1>Edit Image</h1>
+                <label for="filter">Filter</label>
+                <div class="filter">
+                    <button id="brightness" class="active"><i class='bx bxs-brightness bx-sm'></i></button>
+                    <button id="saturation"><i class='bx bxs-droplet-half bx-sm'></i></button>
+                    <button id="inversion"><i class='bx bx-recycle bx-sm'></i></button>
+                    <button id="grayscale"><i class='bx bxs-layer bx-sm'></i></button> 
+                    <button id="blur"><i class='bx bxs-brush bx-sm'></i></button>
+                    <button id="hue-rotate"><i class='bx bxs-color bx-sm'></i></button>
+                    <div class="slider">
+                        <div class="filter-value">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <label for="rotate">Rotate</label>
+                <div class="rotate">
+                    <button id="clockwise" ><i class="fa-solid fa-rotate-right"></i></button>
+                    <button id="anti"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                    <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                </div>
+                <label for="resize">Resize</label>
+                <div class="resize">
+                    <label for="width">Width</label>
+                    <input type="number" name="width" id="width">
+                    <label for="width">Height</label>
+                    <input type="number" name="height" id="height">
+                </div>
+                <div class="aspect">
+                    <label for="ratio">Lock aspect ratio</label>
+                    <input type="checkbox" id="ratio" name="ratio" checked>
+                </div>
+            </div>
+            <div class="preview-image">
+                <img src="image-placeholder.png"/>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="reset">
+                <button id="reset">Reset</button>
+            </div>
+            <div class="choose save">
+                <input type="file" class="img-input" accept="image/*" hidden>
+                <button id="choose">Choose</button>
+                <button id="save">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
